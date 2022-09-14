@@ -1,20 +1,16 @@
-import ButtonsLinkComponent from 'components/atoms/linkButton/buttonsLinkComponent';
 import { faHouse, faHeart, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-import TitlesComponent from 'components/atoms/titles/titlesComponent';
-import TitlesAlbumComponent from 'components/atoms/titlesAlbum/titlesAlbumComponent';
+import ALink from 'components/atoms/ALink/ALink.component';
+import 'components/molecules/HomeSection/HomeSection.scss';
 
-const HomeSection = () => {
-
-  
+export const HomeSection = () => {
 
   return (
     <>
-      <section className='section__home'>
-        <TitlesComponent text="Inicio" />
-        <TitlesComponent text="Favoritos" />
-        <ButtonsLinkComponent icon={faHouse} title="Inicio"/>
-       
-      </section>
+      <nav className='nav'>
+        <ALink type='NavLink' isIcon={true} icon ={faHouse} name="Inicio" link='/home' />
+        <ALink type='NavLink' isIcon={true} icon ={faHeart} name="Favoritos" link='/favorites' />
+        <ALink type='NavLink' isIcon={true} icon ={faCircleXmark} name="Salir" link='/login' />
+      </nav>
     </>
   )
 }

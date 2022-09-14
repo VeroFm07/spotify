@@ -1,0 +1,20 @@
+//VARIABLES
+$colorLink: #1db954;
+
+//FORMATTING STYLES TO THE BROWSER
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//--MOBILE 320PX--
+.nav{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position:fixed;
+    bottom: 0;
+    padding: .5rem;
+}
