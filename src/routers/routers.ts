@@ -8,10 +8,10 @@ interface Roter {
     Component: LazyExoticComponent<JSXCoponent> | JSXCoponent
 }
 
-const LazyLogin = lazy(() => import('../pages/public/Login/Login.component'));
+const LazyLogin = lazy(() => import('../components/pages/public/Login/LoginPages'));
 
-const LazyHome = lazy(() => import('../pages/private/Home/Home.component'));
-const LazyFavorites = lazy(() => import('../pages/private/Favorites/Favorites.component'));
+const LazyHome = lazy(() => import('../components/pages/private/Home/Home.component'));
+const LazyFavorites = lazy(() => import('../components/pages/private/Favorites/Favorites.component'));
 
 export const routesPublic: Roter[] = [
     {

@@ -1,0 +1,21 @@
+//VARIABLES
+$colorLink: #1db954;
+
+//FORMATTING STYLES TO THE BROWSER
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//--MOBILE 320PX--
+.link__login{
+    background-color:$colorLink;
+    border-radius: 90px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    font-weight: bolder;
+}
+
