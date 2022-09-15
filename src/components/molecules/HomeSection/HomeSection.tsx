@@ -9,7 +9,7 @@ export const HomeSection = () => {
       <nav className='nav'>
         <ALink type='NavLink' isIcon={true} icon ={faHouse} name="Inicio" link='/home' />
         <ALink type='NavLink' isIcon={true} icon ={faHeart} name="Favoritos" link='/favorites' />
-        <ALink type='NavLink' isIcon={true} icon ={faCircleXmark} name="Salir" link='/login' />
+        <ALink type='NavLink' isIcon={true} icon ={faCircleXmark} name="Salir" link='/' />
       </nav>
     </>
   )

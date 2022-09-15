@@ -1,2 +1,3 @@
-export * from './songs.interface'
+export * from './playlist.interface';
+
 
