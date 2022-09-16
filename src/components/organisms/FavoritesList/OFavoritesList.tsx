@@ -1,23 +1,26 @@
-import MFavorites from 'components/molecules/Favorites/MFavorites';
-import MSong from 'components/molecules/Song/MSong';
+import { faHeart, faHeartCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import MFavorites from 'components/molecules/Favorite/MFavorites';
 import React, { FC } from 'react'
 import { Item } from 'utils/interfaces/favoritesList.interface';
+import 'components/organisms/Playlist/OPlaylist.scss';
 
-
-interface IProps{
-    songListFav: Item[];
+interface IProps {
+  songListFav: Item[];
 }
-const OFavoritesList: FC<IProps>= ({songListFav}) => {
+
+const OFavoritesList: FC<IProps> = ({ songListFav }) => {
   return (
-    <div>
-        {
-                songListFav?.map(({track}, index) => (
-                    <div key={index} >
-                        <MFavorites nameSong={track.name} img={track.album.images[0].url} nameArtist={track.artists[0].name}/>
-                    </div>
-                ))
-            }
-    </div>
+    <section className='section__MPlaylist'>
+      {
+        songListFav?.map(({ track }, index) => {
+          return (
+            <article key={index} className='section__playlist'>
+              <MFavorites isFavorite={track.isFavorite} id={track.id} img={track.album.images[0].url} nameSong={track.name} nameArtist={track.artists[0].name} icon={faHeartCircleCheck} />
+            </article>
+          )
+        })
+      }
+    </section>
   )
 }
 

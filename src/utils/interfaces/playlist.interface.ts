@@ -36,17 +36,12 @@ export interface Owner {
     external_urls: ExternalUrls;
     href:          string;
     id:            string;
-    type:          Type;
+    type:          OwnerType;
     uri:           string;
-    name:         string;
+    name?:         string;
 }
 
-export enum Name {
-    VariosArtistas = "Varios Artistas",
-    Yelsid = "Yelsid",
-}
-
-export enum Type {
+export enum OwnerType {
     Artist = "artist",
     Track = "track",
     User = "user",
@@ -84,33 +79,50 @@ export interface Track {
     id:            string;
     is_local:      boolean;
     is_playable:   boolean;
-    linked_from?:  Owner;
     name:          string;
     popularity:    number;
-    preview_url:   string;
+    preview_url:   null | string;
     track:         boolean;
     track_number:  number;
-    type:          Type;
+    type:          OwnerType;
     uri:           string;
+    linked_from?:  Owner;
+    restrictions?: Restrictions;
+    isFavorite?:    boolean;
 }
 
 export interface Album {
-    album_type:             string;
+    album_type:             AlbumTypeEnum;
     artists:                Owner[];
     external_urls:          ExternalUrls;
     href:                   string;
     id:                     string;
     images:                 Image[];
     name:                   string;
-    release_date:           Date;
-    release_date_precision: string;
+    release_date:           string;
+    release_date_precision: ReleaseDatePrecision;
     total_tracks:           number;
-    type:                   string;
+    type:                   AlbumTypeEnum;
     uri:                    string;
+}
+
+export enum AlbumTypeEnum {
+    Album = "album",
+    Compilation = "compilation",
+    Single = "single",
+}
+
+export enum ReleaseDatePrecision {
+    Day = "day",
+    Year = "year",
 }
 
 export interface ExternalIDS {
     isrc: string;
+}
+
+export interface Restrictions {
+    reason: string;
 }
 
 export interface VideoThumbnail {

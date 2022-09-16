@@ -1,14 +1,14 @@
 import { FC } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import 'components/atoms/AButton/AButton.scss';
 
 
 interface IProps {
     isIcon: boolean;
     onlyIcon?: boolean;
     icon?: IconDefinition;
-    onClick: () => {};
+    onClick: any;
     className: string;
     name?: string;
 }

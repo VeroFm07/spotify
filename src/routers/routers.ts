@@ -9,7 +9,7 @@ interface Roter {
 }
 
 const LazyLogin = lazy(() => import('../pages/public/Login/Login'));
-const LazyHome = lazy(() => import('../pages/private/Home/Home.component'));
+const LazyHome = lazy(() => import('../pages/private/Home/Home'));
 const LazyFavorites = lazy(() => import('../pages/private/Favorites/Favorites'));
 
 export const routesPublic: Roter[] = [

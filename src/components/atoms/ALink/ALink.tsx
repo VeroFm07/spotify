@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import 'components/atoms/ALink/ALink.component.scss';
+import 'components/atoms/ALink/ALink.scss';
 
 interface IProps {
     type: 'NavLink' | 'a';
@@ -13,7 +13,7 @@ interface IProps {
 }
 
 //Función para traer los props y validar en el return si existen para saber que mostrará la interfaz
-export const ALink: FC<IProps> = ({ type, isIcon, icon, name, link}) => {
+export const ALink: FC<IProps> = ({ type, isIcon, icon, name, link }) => {
     if (type === 'a') {
         return (
             <a href={link} className='link__login' >{name}</a>
@@ -25,7 +25,7 @@ export const ALink: FC<IProps> = ({ type, isIcon, icon, name, link}) => {
                     isIcon
                         ?
                         <>
-                            <FontAwesomeIcon icon={icon!} /> {name} 
+                            <FontAwesomeIcon icon={icon!} /> {name}
                         </>
                         :
                         <>

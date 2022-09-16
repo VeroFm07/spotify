@@ -1,4 +1,4 @@
-import { LoginSection } from 'components/molecules';
-const LoginPages = () => <LoginSection />
+import { MLogin } from 'components/molecules/Login/MLogin';
+const LoginPages = () => <MLogin />
 
 export default LoginPages

@@ -1,3 +1,3 @@
-export * from './HomeSection/HomeSection'
-export * from './LoginSection/LoginSection'
-export * from './Song/MSong'
+export * from './Home/MHome'
+export * from './Login/MLogin'
+export * from './PlayList/MPlaylist'

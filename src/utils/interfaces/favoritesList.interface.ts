@@ -31,6 +31,7 @@ export interface Track {
     track_number:  number;
     type:          any;
     uri:           string;
+    isFavorite?:    boolean;
 }
 
 export interface Album {

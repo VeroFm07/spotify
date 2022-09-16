@@ -1,7 +1,8 @@
 import { getTokenLocalStorage } from '../helpers/token';
 
 //Permisos a la API
-export const scopes = ['user-read-recently-played',
+export const scopes = ['ugc-image-upload',
+    'user-read-recently-played',
     'user-top-read',
     'user-read-playback-position',
     'user-read-playback-state',
@@ -21,8 +22,10 @@ export const scopes = ['user-read-recently-played',
 ];
 
 //Variables que contienen las url para las peticiones a la API
-export const urlApi = 'https://api.spotify.com/v1/browse/new-releases/'
-export const urlPlaylist = 'https://api.spotify.com/v1/playlists/37i9dQZF1DWZjqjZMudx9T'
-export const urlUser = 'https://api.spotify.com/v1/me'
-export const urlPlaylistFav= 'https://api.spotify.com/v1/me/tracks'
+export const urlUser = 'https://api.spotify.com/v1/me';
+export const urlPlaylist = 'https://api.spotify.com/v1/playlists/7FvZlu4uQ1kCbBRxsgpkA2';
+export const urlPlaylistFav= 'https://api.spotify.com/v1/me/tracks';
+export const urlCreateFav= 'https://api.spotify.com/v1/me/tracks';
+export const urlDeleteFav='https://api.spotify.com/v1/me/tracks';
+export const urlComprobationFav ='https://api.spotify.com/v1/me/tracks/contains';
 export const headers = { 'Content-Type': 'application/json', Authorization: 'Bearer ' + getTokenLocalStorage() }

@@ -1,24 +1,26 @@
-import MSong from 'components/molecules/Song/MSong';
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
+import MPlaylist from 'components/molecules/PlayList/MPlaylist';
 import { Item } from 'utils/interfaces/playlist.interface'
+import { faHeartCircleCheck} from '@fortawesome/free-solid-svg-icons';
+import 'components/organisms/Playlist/OPlaylist.scss';
 
-interface IProps{
-    songList: Item[];
+interface IProps {
+  songList: Item[];
 }
-const OPlaylist: FC<IProps>= ({songList}) => {
+const OPlaylist: FC<IProps> = ({ songList }) => {
+
   return (
-    <div>
-        {
-                songList?.map(({ track}, index) => (
-                    <div key={index} >
-                        <MSong nameSong={track.name} img={track.album.images[0].url} nameArtist={track.artists[0].name}/>
-                    </div>
-                ))
-            }
-    </div>
-   
-    
-   
+    <section className='section__MPlaylist'>
+      {
+        songList?.map(({ track }, index) => {
+          return (
+            <article key={index} className='section__playlist'>
+              <MPlaylist isFavorite={track.isFavorite} id={track.id} img={track.album.images[0].url} nameSong={track.name} nameArtist={track.artists[0].name} icon={faHeartCircleCheck} />
+            </article>
+          )
+        })
+      }
+    </section>
   )
 }
 

@@ -1,16 +1,17 @@
 import { faHouse, faHeart, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-import ALink from 'components/atoms/ALink/ALink.component';
-import { HomeSection } from 'components/molecules';
-import TFavorites from 'components/templates/TFavorites/TFavorites';
+import ALink from 'components/atoms/ALink/ALink';
+import { MHome } from 'components/molecules/Home/MHome'
+import TFavorites from 'components/templates/Favorites/TFavorites';
+import TUser from 'components/templates/User/TUser';
 
 export const Favorites = () => {
-    return (
-        <>
-          <HomeSection/>
-          <TFavorites/>
-       
-      </>
-    )
+  return (
+    <>
+      <MHome />
+      <TUser/>
+      <TFavorites />
+    </>
+  )
 }
 
 export default Favorites
