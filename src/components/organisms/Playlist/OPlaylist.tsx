@@ -1,12 +1,14 @@
 import React, { FC, useEffect } from 'react'
 import MPlaylist from 'components/molecules/PlayList/MPlaylist';
-import { Item } from 'utils/interfaces/playlist.interface'
+import { Item } from 'utils/interfaces/Playlist/IPlaylist';
 import { faHeartCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import 'components/organisms/Playlist/OPlaylist.scss';
 
 interface IProps {
   songList: Item[];
 }
+
+//Función que recibe la lista de canciones y las recorre por medio del map
 const OPlaylist: FC<IProps> = ({ songList }) => {
 
   return (

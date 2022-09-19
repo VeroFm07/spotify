@@ -21,11 +21,13 @@ export const scopes = ['ugc-image-upload',
     'user-read-email'
 ];
 
-//Variables que contienen las url para las peticiones a la API
+//Url para hacer las peticiones a la api
 export const urlUser = 'https://api.spotify.com/v1/me';
 export const urlPlaylist = 'https://api.spotify.com/v1/playlists/7FvZlu4uQ1kCbBRxsgpkA2';
 export const urlPlaylistFav= 'https://api.spotify.com/v1/me/tracks';
 export const urlCreateFav= 'https://api.spotify.com/v1/me/tracks';
 export const urlDeleteFav='https://api.spotify.com/v1/me/tracks';
 export const urlComprobationFav ='https://api.spotify.com/v1/me/tracks/contains';
+
+//Variable con los headers de cada petición
 export const headers = { 'Content-Type': 'application/json', Authorization: 'Bearer ' + getTokenLocalStorage() }

@@ -1,5 +1,3 @@
-
-
 export const getToken = () => {
     const extraccion = window.location.hash.substring(1).split("&"); //Separa la URL a partir de #
     //Función que reduce cada elemento del array
@@ -12,15 +10,16 @@ export const getToken = () => {
     return partesParametros;
 };
 
-
+//Función para mostrar el token en el local storage
 export const setTokenLocalStorage = (token: string): void => {
     window.localStorage.setItem('access__token', token)
 }
-
+//Función para guardar en el local storage el token
 export const getTokenLocalStorage = (): string => {
     return window.localStorage.getItem('access__token') || ''
 }
 
+//Función para limpiar la url
 export const clearHash = (): void => {
-    window.location.hash = ''
+    window.location.hash = '';
 }

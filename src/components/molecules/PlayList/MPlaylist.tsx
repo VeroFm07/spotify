@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { faHeart, faHeartCircleCheck, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import AName from 'components/atoms/AName/AName'
 import 'components/atoms/AButton/AButton.scss';
-import { putFavoritesC, putFavoritesD } from 'services';
+import { deleteFavorites, putFavoritesC} from 'services';
 import AImage from 'components/atoms/AImage/AImage';
 import 'components/molecules/PlayList/MPlaylist.scss';
 import AButton from 'components/atoms/AButton/AButton';
@@ -18,10 +18,11 @@ interface Iprops {
 
 const MPlaylist: FC<Iprops> = ({ nameSong, img, nameArtist, id, isFavorite }) => {
   const createFav = () => { //Función para hacer la petición del id de la canción
-    putFavoritesC(id);
+    putFavoritesC(id); //llamado a la petición para crear un favorito por medio del id
   }
+  
   const deleteFav = () => { //Función para hacer la petición del id de la canción
-    putFavoritesD(id); //PETICION ELIMINAR //isLike?agregarFav3 : agregarFav
+    deleteFavorites(id); //llamado a la petición para eliminar el id de favoritos
   }
 
   return (

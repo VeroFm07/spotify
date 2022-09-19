@@ -3,7 +3,7 @@ import OUser from 'components/organisms/User/OUser';
 import { UserInfo, userInfo } from 'os';
 import React, { useEffect, useState } from 'react'
 import { getUser } from 'services';
-import { User } from 'utils/interfaces/user.interface'
+import { User } from 'utils/interfaces/User/IUser'
 
 const TUser = () => {
   const [user, setUser] = useState<User>();

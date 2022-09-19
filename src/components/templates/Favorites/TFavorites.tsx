@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { getFavorites } from 'services';
-import { Item } from 'utils/interfaces/favoritesList.interface';
+import { Item } from 'utils/interfaces/Favorite/IFavorite';
 import OFavoritesList from 'components/organisms/FavoritesList/OFavoritesList';
 
 const TFavorites = () => {
   
+  //Función que devuelve los data de la lista de canciones
   const [songsF, setSongsFav] = useState<Item[]>();
   useEffect(() => {
     getFavorites()

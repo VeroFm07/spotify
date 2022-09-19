@@ -1,6 +1,6 @@
 import MUser from 'components/molecules/User/MUser';
 import React, { FC } from 'react'
-import { User } from 'utils/interfaces/user.interface';
+import { User } from 'utils/interfaces/User/IUser';
 
 interface IProps {
   userInf: User;

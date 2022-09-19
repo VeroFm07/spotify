@@ -1,6 +1,5 @@
 import { faHouse, faHeart, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import ALink from 'components/atoms/ALink/ALink';
-import AName from 'components/atoms/AName/AName';
 import 'components/molecules/Home/MHome.scss';
 
 export const MHome = () => {
