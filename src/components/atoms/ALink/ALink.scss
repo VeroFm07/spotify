@@ -25,3 +25,9 @@ $colorLink: #1db954;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (min-width: 768px){
+    .link__login{
+        font-size: 2rem;
+    }
+}

@@ -6,10 +6,16 @@
 }
 
 //--MOBILE 320PX--
-.section__login{
-    width: 100%;
-}
+
 .img__login {
     width: 100%;
     padding: .5rem;
+}
+
+@media (min-width: 1366px) {
+    .img__login{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
 }
