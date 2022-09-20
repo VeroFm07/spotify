@@ -12,7 +12,8 @@ export const getToken = () => {
 
 //Función para mostrar el token en el local storage
 export const setTokenLocalStorage = (token: string): void => {
-    window.localStorage.setItem('access__token', token)
+    window.localStorage.setItem('access__token', token);
+    window.location.href= '/home';
 }
 //Función para guardar en el local storage el token
 export const getTokenLocalStorage = (): string => {

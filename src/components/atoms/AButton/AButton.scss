@@ -3,11 +3,40 @@ $colorLink: #1db954;
 
 //--MOBILE 320PX--
 .btn__heart{
-    background-color: #12263d;
-    color: #ff9608;
+    background-color: #12263d00;
+    color: #30a771;
     border: 0px solid #12263d;
     border-radius: 30%;
     font-size: 1.2rem;
     margin-left:3.5rem;
     height: 10%;
+}
+
+//--MOBILE 375PX--
+@media (min-width: 375px){
+    .btn__heart{
+        margin-left: 4rem;
+    }
+}
+
+//--MOBILE 425PX--
+@media (min-width:425px){
+    .btn__heart{
+        margin-left: 5rem ;
+    }
+}
+
+//--TABLET 768PX--
+@media (min-width:768px){
+    .btn__heart{
+        font-size: 2rem;
+        margin-left: 6rem;
+    }
+}
+
+//--LAPTOP 1024PX--
+@media (min-width:1024px){
+    .btn__heart{
+        margin-left: 4.5rem;
+    }
 }

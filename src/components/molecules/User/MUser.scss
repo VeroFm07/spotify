@@ -1,7 +1,3 @@
-//VARIABLES
-$colorLink: #1db954;
-
-
 //--MOBILE 320PX--
 .header {
     width: 100%;
@@ -9,7 +5,7 @@ $colorLink: #1db954;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #7d253a;
+    background-color: #004A4F;
 
     &__name {
         font-size: .8rem;
@@ -28,5 +24,67 @@ $colorLink: #1db954;
         margin: .5rem;
         border-radius: 1rem;
         padding: 0;
+    }
+}
+
+//--MOBILE 375PX--
+@media (min-width: 375px){
+    .header__name{
+        font-size: .9rem;
+    }
+    .header__figure{
+        width: 8%;
+    }
+    .header__img{
+        width: 100%;
+    }
+}
+//--MOBILE 425PX--
+@media (min-width: 425px){
+    .header__name{
+        font-size: 1rem;
+    }
+    .header__figure{
+        width: 7%;
+    }
+    .header__img{
+        width: 100%;
+    }
+}
+
+//--TABLET 768PX--
+@media (min-width: 768px){
+    .header{
+        justify-content: center;
+        &__name{
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-right: 3rem;
+        }
+        &__figure{
+            width: 5%;
+            margin-right: -10rem;
+        }
+    }
+}
+
+//--LAPTOP 1024PX--
+@media (min-width: 1024px){
+    .header{
+        height: 12vh;
+        justify-content: space-around;
+    }
+}
+
+//--DEKTOP 1366PX--
+@media (min-width: 1366px){
+    .header{
+        height: 15vh;
+        justify-content: space-around;
+        
+        &__figure{
+            width: 3.5%;
+            margin-right: -10rem;
+        }
     }
 }
