@@ -4,7 +4,7 @@ import { Item } from 'utils/interfaces/Favorite/IFavorite';
 import OFavoritesList from 'components/organisms/FavoritesList/OFavoritesList';
 
 const TFavorites = () => {
-  
+  let vari= "Hola";
   //Función que devuelve los data de la lista de canciones
   const [songsF, setSongsFav] = useState<Item[]>();
   useEffect(() => {
