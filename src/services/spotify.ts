@@ -1,22 +1,21 @@
 import axios from 'axios';
-import { headers, scopes, urlComprobationFav, urlCreateFav, urlDeleteFav, urlPlaylist, urlPlaylistFav, urlUser } from 'utils/global';
+import { headers, scopes, urlComprobationFav, urlCreateFav, urlDeleteFav, urlPlaylistFav} from 'utils/global';
 import { User} from 'utils/interfaces/User/IUser';
-import { Playlist} from 'utils/interfaces/Playlist/IPlaylist';
 import { Favorites } from 'utils/interfaces/Favorite/IFavorite';
 
 //Construcción de la URL
 export const autorizeURL = `${process.env.REACT_APP_END_POINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&scope=${scopes?.join("%20")}&show_dialog=true`;
 
 
-//Petición para traer la playlist
-export const getPlaylist = () => {
-    return axios.get<Playlist>(urlPlaylist, { headers })
-}
+// //Petición para traer la playlist
+// export const getPlaylist = () => {
+//     return axios.get<Playlist>(urlPlaylist, { headers })
+// }
 
 //Petición para traer datos del usuario
-export const getUser=()=>{
-    return axios.get<User>(urlUser, {headers})
-}
+// export const getUser=()=>{
+//     return axios.get<User>(urlUser, {headers})
+// }
 
 //Petición para mostrar la lista de favoritos
 export const getFavorites=()=>{

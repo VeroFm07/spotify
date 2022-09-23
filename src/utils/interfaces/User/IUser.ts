@@ -1,7 +1,7 @@
 export interface User {
     display_name:  string;
-    external_urls: ExternalUrls;
-    followers:     Followers;
+    external_urls: any;
+    followers:     any;
     href:          string;
     id:            string;
     images:        Image[];

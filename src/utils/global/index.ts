@@ -22,8 +22,8 @@ export const scopes = ['ugc-image-upload',
 ];
 
 //Url para hacer las peticiones a la api
-export const urlUser = 'https://api.spotify.com/v1/me';
-export const urlPlaylist = 'https://api.spotify.com/v1/playlists/7FvZlu4uQ1kCbBRxsgpkA2';
+// export const urlUser = 'https://api.spotify.com/v1/me';
+// export const urlPlaylist = 'https://api.spotify.com/v1/playlists/7FvZlu4uQ1kCbBRxsgpkA2';
 export const urlPlaylistFav= 'https://api.spotify.com/v1/me/tracks';
 export const urlCreateFav= 'https://api.spotify.com/v1/me/tracks';
 export const urlDeleteFav='https://api.spotify.com/v1/me/tracks';
