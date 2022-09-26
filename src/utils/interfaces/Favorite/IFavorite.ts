@@ -14,24 +14,24 @@ export interface Item {
 }
 
 export interface Track {
-    album:         Album;
+    album:         any;
     artists:       Artist[];
     disc_number:   number;
     duration_ms:   number;
-    explicit:      boolean;
-    external_ids:  ExternalIDS;
-    external_urls: ExternalUrls;
+    explicit:      any;
+    external_ids:  any;
+    external_urls: any;
     href:          string;
     id:            string;
-    is_local:      boolean;
-    is_playable:   boolean;
+    is_local:      any;
+    is_playable:   any;
     name:          string;
     popularity:    number;
     preview_url:   string;
     track_number:  number;
     type:          any;
     uri:           string;
-    isFavorite?:    boolean;
+    isFavorite?:   any;
 }
 
 export interface Album {

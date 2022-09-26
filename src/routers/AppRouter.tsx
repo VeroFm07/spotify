@@ -9,17 +9,11 @@ export const AppRouter = () => {
 
   useEffect(() => {
     const { access_token } = getToken(); // url
-    clearHash();
+    clearHash(); //Limpia la url
 
     if (access_token !== '' && access_token !== undefined) {
       setTokenLocalStorage(access_token);
     }
-
-    if (!!getTokenLocalStorage()) {
-
-      //.. get canciones
-    }
-
   }, [])
 
   return (

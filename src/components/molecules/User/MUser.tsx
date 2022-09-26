@@ -4,8 +4,8 @@ import React, { FC } from 'react'
 import 'components/molecules/User/MUser.scss';
 
 interface Iprops {
-    nameUser: string;
-    imgUser: string;
+    nameUser: any;
+    imgUser: any;
   }
 
 const MUser: FC<Iprops>= ({nameUser,imgUser}) => {
