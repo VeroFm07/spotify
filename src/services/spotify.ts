@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { headers, scopes, urlComprobationFav, urlCreateFav} from 'utils/global';
+import { headers, scopes, urlComprobationFav} from 'utils/global';
 import { Favorites } from 'utils/interfaces/Favorite/IFavorite';
 import { Playlist } from 'utils/interfaces/Playlist';
 
@@ -22,15 +22,15 @@ export const autorizeURL = `${process.env.REACT_APP_END_POINT}?client_id=${proce
 //     return axios.get<Favorites>(urlPlaylistFav, {headers})
 // }
 
-export const putFavoritesC= (id:string)=>{
-    return axios.put<Favorites>(urlCreateFav+`?ids=${id}`, null, {headers})
-}
+// export const putFavoritesC= (id:string)=>{
+//     return axios.put<Favorites>(urlCreateFav+`?ids=${id}`, null, {headers})
+// }
 
 // export const deleteFavorites= (id:string)=>{
 //     return axios.delete<Favorites>(urlDeleteFav+`?ids=${id}`, {headers})
 // }
-// export const getComprobation=(ids:string[])=>{
-//     const concatIds=ids.toString();
-//     return axios.get<Array<boolean>>(urlComprobationFav+`?ids=${concatIds}`, {headers})
-// }
+export const getComprobation=(ids:string[])=>{
+    const concatIds=ids.toString();
+    return axios.get<Array<boolean>>(urlComprobationFav+`?ids=${concatIds}`, {headers})
+}
 

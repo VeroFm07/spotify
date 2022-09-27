@@ -1,5 +1,4 @@
 import axios from "axios";
-import { apiUrl } from "redux/api/apiUrl";
 import { headers } from "utils/global";
 import { Favorites } from "utils/interfaces/Favorite";
 

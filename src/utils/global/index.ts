@@ -25,7 +25,7 @@ export const scopes = ['ugc-image-upload',
 // export const urlUser = 'https://api.spotify.com/v1/me';
 // export const urlPlaylist = 'https://api.spotify.com/v1/playlists/7FvZlu4uQ1kCbBRxsgpkA2';
 // export const urlPlaylistFav= 'https://api.spotify.com/v1/me/tracks';
-export const urlCreateFav= 'https://api.spotify.com/v1/me/tracks';
+// export const urlCreateFav= 'https://api.spotify.com/v1/me/tracks';
 
 export const urlComprobationFav ='https://api.spotify.com/v1/me/tracks/contains';
 

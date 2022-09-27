@@ -7,7 +7,6 @@ let tracksResponse: User= {display_name: "", external_urls:[], followers: [], hr
 await apiUrl.get<User>('/me', {headers})
 .then(({data})=>{
     tracksResponse= data;
-    console.log(data)
 });
 return tracksResponse;
 }

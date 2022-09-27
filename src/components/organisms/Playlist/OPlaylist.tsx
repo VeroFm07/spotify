@@ -7,18 +7,20 @@ import { getPlaylists} from 'redux/thunks/playlistThunk';
 import { setPlaylist } from 'redux/slices/playlistSlice';
 import { useAppDispatch, useAppSelector } from 'redux/hooks/hooks';
 
-
 //Función que recibe la lista de canciones y las recorre por medio del map
 const OPlaylist: FC = () => {
   const [playlist, setPlaylistView] = useState<Tracks>()
   const dispatch= useAppDispatch();
+
   
   useEffect(() => {
     getPlaylists().then(data =>{
       dispatch(setPlaylist(data)) //Se trae de redux el reducer
       setPlaylistView(data); //Se asigna a la variable la data que trae la petición
+     
     })
-   
+
+    
 }, [dispatch]);
  
   return (
