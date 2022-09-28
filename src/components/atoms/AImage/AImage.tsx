@@ -8,7 +8,7 @@ interface IProps {
 
 export const AImage: FC<IProps> = ({urlImg, className}) => {
   return (
-    <figure className={className}>
+    <figure className={'main__figure'}>
         <img className={className} src={urlImg} alt="spotify" />
     </figure>
   )

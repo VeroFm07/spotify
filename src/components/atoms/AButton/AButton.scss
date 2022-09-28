@@ -1,10 +1,7 @@
-//VARIABLES
-$colorLink: #1db954;
-
 //--MOBILE 320PX--
 .btn__heart{
     background-color: #12263d00;
-    color: #30a771;
+    color: #e40e52;
     border: 0px solid #12263d;
     border-radius: 30%;
     font-size: 1.2rem;
@@ -39,5 +36,13 @@ $colorLink: #1db954;
 @media (min-width:1024px){
     .btn__heart{
         margin-left: 4.5rem;
+    }
+}
+
+
+//--DESKTOP 1366PX--
+@media (min-width:1366px){
+    .btn__heart{
+        margin-left: 5rem;
     }
 }

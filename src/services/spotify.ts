@@ -30,7 +30,9 @@ export const autorizeURL = `${process.env.REACT_APP_END_POINT}?client_id=${proce
 //     return axios.delete<Favorites>(urlDeleteFav+`?ids=${id}`, {headers})
 // }
 export const getComprobation=(ids:string[])=>{
+    const urlComprobation='https://api.spotify.com/v1/me/tracks/contains';
     const concatIds=ids.toString();
-    return axios.get<Array<boolean>>(urlComprobationFav+`?ids=${concatIds}`, {headers})
+    console.log(ids)
+    return axios.get<Array<boolean>>(urlComprobation+`?ids=${concatIds}`, {headers})
+  
 }
-

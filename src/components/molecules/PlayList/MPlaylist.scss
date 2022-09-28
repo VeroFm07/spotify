@@ -9,69 +9,97 @@ $colorLink: #1db954;
     background-color: #fff;
     border-radius: 1rem;
     overflow: hidden;
-   
+
     &__figure {
         width: 100%;
-        border-radius: 1rem;
+        overflow: hidden;
+        height: 55%;
     }
-    &__img{
-        max-width: 100%;
-        max-height: 100%;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        
     }
+
     &__name {
         width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         padding: .5rem;
         color: #000;
-        
+
     }
-    &__name--M{
+
+    &__name--M {
         font-weight: bolder;
     }
 }
+
 //--MOBILE 375PX--
-@media (min-width: 375px){
-    .main{
+@media (min-width: 375px) {
+    .main {
         height: 50vh;
     }
 }
 
 //--MOBILE 425PX--
-@media (min-width:425px){
-    .main{
+@media (min-width:425px) {
+    .main {
         height: 53vh;
+
+        &__figure {
+            height: 65%;
+        }
     }
 }
 
 //--TABLET 768PX--
-@media (min-width:768px){
-    .main{
+@media (min-width:768px) {
+    .main {
         height: 58vh;
-    }
-    .main__name{
-        height: 4rem;
-        font-size: 1.5rem;
+
+        &__figure {
+            height: 55%;
+        }
+
+        &__name {
+            height: 4rem;
+            font-size: 1.5rem;
+        }
     }
 }
 
 //--LAPTOP 1024PX--
-@media (min-width: 1024px){
-    .main{
-        width: 85%;
-        height: 48vh;
+@media (min-width: 1024px) {
+    .main {
+        width: 90%;
+        height: 45vh;
+
+        &__figure {
+            height: 55%;
+        }
+
+        &__name {
+            font-size: 2rem;
+        }
     }
 }
 
 //--DESKTOP 1366PX--
-@media (min-width: 1366px){
-    .main{
-        height: 60vh;
+@media (min-width: 1366px) {
+    .main {
+        height: 65vh;
+        width: 100%;
+
+        &__name {
+            font-size: 1.5rem;
+        }
     }
 }

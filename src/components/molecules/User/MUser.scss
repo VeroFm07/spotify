@@ -5,11 +5,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #004A4F;
+    background-color: #ffc8e1;
 
     &__name {
         font-size: .8rem;
-        color: rgb(255, 255, 255);
+        color: #000;
         font-weight: bolder;
         text-transform: uppercase;
         font-family: Arial, Helvetica, sans-serif;
@@ -21,47 +21,53 @@
 
     &__img {
         width: 100%;
-        margin: .5rem;
-        border-radius: 1rem;
+        border-radius: .5rem;
         padding: 0;
     }
 }
 
 //--MOBILE 375PX--
-@media (min-width: 375px){
-    .header__name{
+@media (min-width: 375px) {
+    .header__name {
         font-size: .9rem;
     }
-    .header__figure{
+
+    .header__figure {
         width: 8%;
     }
-    .header__img{
+
+    .header__img {
         width: 100%;
     }
 }
+
 //--MOBILE 425PX--
-@media (min-width: 425px){
-    .header__name{
+@media (min-width: 425px) {
+    .header__name {
         font-size: 1rem;
     }
-    .header__figure{
+
+    .header__figure {
         width: 7%;
     }
-    .header__img{
+
+    .header__img {
         width: 100%;
     }
 }
 
 //--TABLET 768PX--
-@media (min-width: 768px){
-    .header{
+@media (min-width: 768px) {
+    .header {
         justify-content: center;
-        &__name{
+
+        &__name {
             font-size: 1.3rem;
             font-weight: normal;
             margin-right: 3rem;
         }
-        &__figure{
+
+        &__figure {
             width: 5%;
             margin-right: -10rem;
         }
@@ -69,20 +75,28 @@
 }
 
 //--LAPTOP 1024PX--
-@media (min-width: 1024px){
-    .header{
+@media (min-width: 1024px) {
+    .header {
         height: 12vh;
-        justify-content: space-around;
+        justify-content: space-evenly;
+
+        &__name {
+            font-size: 2rem;
+            font-weight: bolder;
+        }
     }
 }
 
-//--DEKTOP 1366PX--
-@media (min-width: 1366px){
-    .header{
+//--DESKTOP 1366PX--
+@media (min-width: 1366px) {
+    .header {
         height: 15vh;
-        justify-content: space-around;
         
-        &__figure{
+        &__name {
+            font-size: 1.5rem;
+        }
+
+        &__figure {
             width: 3.5%;
             margin-right: -10rem;
         }

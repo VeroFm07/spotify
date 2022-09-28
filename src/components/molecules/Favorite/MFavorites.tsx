@@ -8,6 +8,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { deleteFavorites} from 'redux/thunks/deleteFavThunk';
 import 'components/molecules/PlayList/MPlaylist.scss';
 import 'components/organisms/Playlist/OPlaylist.scss';
+import Swal from 'sweetalert2';
 
 
 interface Iprops {
@@ -22,7 +23,25 @@ interface Iprops {
 const MFavorites: FC<Iprops> = ({ nameSong, img, nameArtist, icon, id, isFavorite }) => {
   
   const deleteFav=()=>{
-    deleteFavorites(id)
+    deleteFavorites(id);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      background: '#004A4F',
+      color: '#fff',
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Eliminado de favoritos'
+    })
   }
     
   return (

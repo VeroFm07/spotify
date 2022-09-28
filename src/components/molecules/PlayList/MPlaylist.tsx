@@ -7,15 +7,10 @@ import AImage from 'components/atoms/AImage/AImage';
 import 'components/molecules/PlayList/MPlaylist.scss';
 import AButton from 'components/atoms/AButton/AButton';
 import { createFavorites } from 'redux/thunks/createFavThunk';
-import { getPlaylists } from 'redux/thunks/playlistThunk';
-import { setPlaylist } from 'redux/slices/playlistSlice';
-import { Tracks } from 'utils/interfaces/Playlist';
-import { useAppDispatch } from 'redux/hooks/hooks';
-import { Favorites } from 'utils/interfaces/Favorite';
-import { getFavorites } from 'redux/thunks/favoritesThunk';
-import { setFavorites } from 'redux/slices/favoritesSlice';
 
+import Swal from 'sweetalert2'
 
+// CommonJS
 interface Iprops {
   nameSong: string;
   img: string;
@@ -28,35 +23,51 @@ const MPlaylist: FC<Iprops> = ({ nameSong, img, nameArtist, id, isFavorite }) =>
 
   const createFav = () => { //Función para hacer la petición del id de la canción
     createFavorites(id); //llamado a la petición para crear un favorito por medio del id
+    //Alerta de que se ha añadido a favoritos
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      background: '#004A4F',
+      color: '#fff',
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Añadido a favoritos'
+    })
   }
   
   const deleteFav = () => { //Función para hacer la petición del id de la canción
     deleteFavorites(id); //llamado a la petición para eliminar el id de favoritos
-  }
-  const [playlist, setPlaylistView] = useState<Tracks>()
-    const dispatch= useAppDispatch();
-  
-    var [playlistFav, setPlaylistFavView]=useState<Favorites>()
-    let [varPlaylist]:ReadonlyArray<any>=[];
-    let [varPlaylistFav]:ReadonlyArray<any>=[];
-useEffect(() => {
-    getPlaylists().then(data =>{
-      dispatch(setPlaylist(data)) //Se trae de redux el reducer
-    varPlaylist=data;
-      setPlaylistView(data); //Se asigna a la variable la data que trae la petición
-      console.log('PLAYLIST', varPlaylist)
+    //Alerta de que se ha eliminado de favoritos
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      background: '#004A4F',
+      color: '#fff',
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
     })
-
-    getFavorites().then(data =>{
-      dispatch(setFavorites(data))
-      varPlaylistFav=data;
-      setPlaylistFavView(data);
-      console.log('FAVORITOS', varPlaylistFav)
-    })
-
-}, [dispatch]);
-  return (
     
+    Toast.fire({
+      icon: 'error',
+      title: 'Añadido a favoritos'
+    })
+  }
+
+  return (
     <main className={'main'}>
       <AImage urlImg={img} className={"main__img"} />
       <AName className={'main__name main__name--M'} name={nameSong} />

@@ -21,7 +21,8 @@ export const ALink: FC<IProps> = ({ type, isIcon, icon, name, link, onClick }) =
         )
     } else {
         return (
-            <NavLink to={link} className='navLink' onClick={onClick}>
+            <NavLink to={link} className={({ isActive }) =>
+            isActive ? 'active' : 'noActive'} onClick={onClick}>
                 {
                     isIcon
                         ?
