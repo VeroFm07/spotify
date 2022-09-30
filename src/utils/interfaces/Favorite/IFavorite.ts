@@ -2,7 +2,7 @@ export interface Favorites {
     href:     string;
     items:    Item[];
     limit:    number;
-    next:     string;
+    next:     null;
     offset:   number;
     previous: null;
     total:    number;
@@ -14,29 +14,29 @@ export interface Item {
 }
 
 export interface Track {
-    album:         any;
-    artists:       Artist[];
-    disc_number:   number;
-    duration_ms:   number;
-    explicit:      any;
-    external_ids:  any;
-    external_urls: any;
-    href:          string;
-    id:            string;
-    is_local:      any;
-    is_playable:   any;
-    name:          string;
-    popularity:    number;
-    preview_url:   string;
-    track_number:  number;
-    type:          any;
-    uri:           string;
-    isFavorite?:   any;
+    album:             Album;
+    artists:           Artist[];
+    available_markets: string[];
+    disc_number:       number;
+    duration_ms:       number;
+    explicit:          boolean;
+    external_ids:      ExternalIDS;
+    external_urls:     ExternalUrls;
+    href:              string;
+    id:                string;
+    is_local:          boolean;
+    name:              string;
+    popularity:        number;
+    preview_url:       null | string;
+    track_number:      number;
+    type:              TrackType;
+    uri:               string;
 }
 
 export interface Album {
     album_type:             AlbumTypeEnum;
     artists:                Artist[];
+    available_markets:      string[];
     external_urls:          ExternalUrls;
     href:                   string;
     id:                     string;
@@ -51,6 +51,7 @@ export interface Album {
 
 export enum AlbumTypeEnum {
     Album = "album",
+    Compilation = "compilation",
     Single = "single",
 }
 
@@ -84,4 +85,8 @@ export enum ReleaseDatePrecision {
 
 export interface ExternalIDS {
     isrc: string;
+}
+
+export enum TrackType {
+    Track = "track",
 }

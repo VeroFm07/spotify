@@ -58,12 +58,13 @@ export interface Tracks {
 }
 
 export interface Item {
-    added_at:        Date;
-    added_by:        Owner;
-    is_local:        boolean;
-    primary_color:   null;
-    track:           Track;
-    video_thumbnail: VideoThumbnail;
+    added_at:        any;
+    added_by?:        Owner;
+    is_local?:        boolean;
+    primary_color?:   null;
+    track:           any;
+    video_thumbnail?: VideoThumbnail;
+    isFavorite?:    boolean;
 }
 
 export interface Track {
@@ -90,6 +91,7 @@ export interface Track {
     restrictions?: Restrictions;
     isFavorite?:    boolean;
 }
+
 
 export interface Album {
     album_type:             AlbumTypeEnum;

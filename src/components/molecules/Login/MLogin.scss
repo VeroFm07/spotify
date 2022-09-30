@@ -13,16 +13,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #000;
+    background-color: #402d36;
     font-family: var(--tipoLetra);
     font-size: 1.5rem;
+}
+.title__spotify{
+    color: #1DB954;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 2rem;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+    font-size: 2rem;
 }
 
 //--DESKTOP 1366PX--
 @media (min-width: 1366px) {
     .section__login{
         height: 100vh;
-        background-color: #000;
+    }
+    .title__spotify{
+        font-size: 3rem;
     }
     
 }

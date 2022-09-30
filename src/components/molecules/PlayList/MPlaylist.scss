@@ -4,10 +4,12 @@ $colorLink: #1db954;
 
 // //--MOBILE 320PX--
 .main {
-    width: 100%;
+    width: 90%;
+    margin: 1rem auto;
     height: 45vh;
     background-color: #fff;
     border-radius: 1rem;
+    border: 2px solid black;
     overflow: hidden;
 
     &__figure {
@@ -63,8 +65,9 @@ $colorLink: #1db954;
 //--TABLET 768PX--
 @media (min-width:768px) {
     .main {
-        height: 58vh;
-
+        width: 90%;
+        border: 2px solid black;
+        
         &__figure {
             height: 55%;
         }
@@ -80,7 +83,6 @@ $colorLink: #1db954;
 @media (min-width: 1024px) {
     .main {
         width: 90%;
-        height: 45vh;
 
         &__figure {
             height: 55%;
@@ -95,11 +97,14 @@ $colorLink: #1db954;
 //--DESKTOP 1366PX--
 @media (min-width: 1366px) {
     .main {
-        height: 65vh;
-        width: 100%;
+        width: 90%;
+        height: 95%;
 
         &__name {
             font-size: 1.5rem;
+        }
+        &__figure{
+            height: 50%;
         }
     }
 }

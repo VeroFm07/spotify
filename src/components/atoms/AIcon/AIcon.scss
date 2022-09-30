@@ -1,0 +1,12 @@
+//--MOBILE 320PX--
+.icon__spotify{
+    color: #1DB954;
+    font-size: 6rem;
+}
+
+//--DESKTOP 1366PX--
+@media (min-width:1366px){
+    .icon__spotify{
+        font-size: 10rem;
+    }
+}

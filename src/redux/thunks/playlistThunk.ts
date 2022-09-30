@@ -7,8 +7,9 @@ export const getPlaylists=async()=>{
     await apiUrl.get<Playlist>('/playlists/7FvZlu4uQ1kCbBRxsgpkA2', {headers})
     .then(({data})=>{
         tracksResponse= data.tracks;
-        
+       
     });
     return tracksResponse;
-
 }
+
+

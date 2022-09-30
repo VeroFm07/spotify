@@ -1,13 +1,16 @@
 import React from 'react'
-import AImage from 'components/atoms/AImage/AImage';
 import { ALink } from 'components/atoms/ALink/ALink'
 import { autorizeURL } from 'services'
 import './MLogin.scss';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import {AIcon} from 'components/atoms/AIcon/AIcon';
+import AName from 'components/atoms/AName/AName';
 
 export const MLogin = () => {
   return (
     <section className='section__login'>
-      <AImage className={'img__login'} urlImg={'https://ipadizate.com/hero/2018/05/Spotify-Portada.jpg?width=768&aspect_ratio=16:9&format=nowebp'} />
+      <AIcon icon={faSpotify}/>
+      <AName className={'title__spotify'} name='¡Bienvenido a Spotify!'/>
       <ALink type='a' isIcon={false} name="Login" link={autorizeURL} />
     </section>
   )

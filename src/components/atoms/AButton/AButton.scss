@@ -1,8 +1,8 @@
 //--MOBILE 320PX--
 .btn__heart{
-    background-color: #12263d00;
-    color: #e40e52;
-    border: 0px solid #12263d;
+    background-color: #fff;
+    color: #6c3430;
+    border: 0px solid #fff;
     border-radius: 30%;
     font-size: 1.2rem;
     margin-left:3.5rem;
@@ -13,7 +13,7 @@
 //--MOBILE 375PX--
 @media (min-width: 375px){
     .btn__heart{
-        margin-left: 4rem;
+        margin-left: 4.5rem;
     }
 }
 
@@ -28,14 +28,14 @@
 @media (min-width:768px){
     .btn__heart{
         font-size: 2rem;
-        margin-left: 6rem;
+        margin-left: 5rem;
     }
 }
 
 //--LAPTOP 1024PX--
 @media (min-width:1024px){
     .btn__heart{
-        margin-left: 4.5rem;
+        margin-left: 6.5rem;
     }
 }
 
@@ -43,6 +43,6 @@
 //--DESKTOP 1366PX--
 @media (min-width:1366px){
     .btn__heart{
-        margin-left: 5rem;
+        margin-left: 5.5rem;
     }
 }
