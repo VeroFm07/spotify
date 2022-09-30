@@ -6,10 +6,12 @@ import AImage from 'components/atoms/AImage/AImage';
 import 'components/molecules/PlayList/MPlaylist.scss';
 import AButton from 'components/atoms/AButton/AButton';
 import Swal from 'sweetalert2'
-import { useAppDispatch } from 'redux/hooks/hooks';
+import { useAppDispatch, useAppSelector } from 'redux/hooks/hooks';
 import { setCreateFav, setDeleteFav } from 'redux/slices/favoritesSlice';
 import { createFavorites, deleteFavorites } from 'redux/thunks/favoritesThunk';
 import { Item } from 'utils/interfaces/Playlist/IPlaylist';
+import { selectPlaylistInfo} from 'redux/slices/playlistSlice';
+import {setPlaylist as setPlaylistSlice} from 'redux/slices/playlistSlice'; 
 
 interface Iprops {
   item: Item;
@@ -19,13 +21,27 @@ const MPlaylist = ({ item }: Iprops) => {
   const dispatch = useAppDispatch();
   const { isFavorite, track } = item;
   const { album, artists, id, name } = track; //pasa los elementos del track
-  const [updatePlaylist, setPlaylist]=useState<boolean>(item.isFavorite!)
- 
+  const [updatePlaylist, setPlaylist] = useState<boolean>(item.isFavorite!)
+  const { playlist } = useAppSelector(selectPlaylistInfo);//TRAE LA PLAYLIST-SELECTOR
+
+  const updateArrayPlaylist = (id: string) => {
+    let arrayModific = playlist.map((element: any) => {
+      if (element.track.id === id) {
+        return { ...element, isFavorite: !isFavorite };
+      }
+      return {...element}
+    })
+    return arrayModific;
+
+  }
+
   const createFavorite = () => { //Función para hacer la petición del id de la canción
     //llamado a la petición para crear un favorito por medio del id
     createFavorites(id).then(() => {
       dispatch(setCreateFav({ id }))
       setPlaylist(true)
+      
+
       //Alerta de que se ha añadido a favoritos
       const Toast = Swal.mixin({
         toast: true,
@@ -46,8 +62,7 @@ const MPlaylist = ({ item }: Iprops) => {
         title: 'Añadido a favoritos'
       })
     })
-    //DESPACHAR FAV ASYNC EN EL PLAYLISTSLICE
-    //Alerta de que se ha añadido a favoritos Y DENTRO DEL THEN DISPARO LA ALERTA--ENCADENAMIENTO DE PROMESAS O PROMISE ALL
+
 
 
   }
@@ -56,6 +71,7 @@ const MPlaylist = ({ item }: Iprops) => {
     deleteFavorites(id).then(() => {
       dispatch(setDeleteFav({ id }))//Se envia a redux
       setPlaylist(false)
+
       //Alerta de que se ha eliminado de favoritos
       const Toast = Swal.mixin({
         toast: true,
@@ -75,11 +91,14 @@ const MPlaylist = ({ item }: Iprops) => {
         icon: 'success',
         title: 'Eliminado de favoritos'
       })
-     
+
     })
+
 
   }
   const handleClicks = () => {
+    const newPlaylist= updateArrayPlaylist(id)
+    dispatch(setPlaylistSlice(newPlaylist));
     updatePlaylist ?
       deleteFavorite() :
       createFavorite()
