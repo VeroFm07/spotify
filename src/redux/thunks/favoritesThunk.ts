@@ -17,7 +17,7 @@ export const getFavorites = async () => {
 export const createFavorites = async (id: string) => {
     const urlCreateFav = 'https://api.spotify.com/v1/me/tracks';
     await axios.put<Favorites>(urlCreateFav + `?ids=${id}`, null, { headers })
-    return getFavorites();
+   
 }
 
 export const deleteFavorites = async (id: string) => {

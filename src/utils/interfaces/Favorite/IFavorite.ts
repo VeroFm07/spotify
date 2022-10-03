@@ -30,7 +30,7 @@ export interface Track {
     preview_url:       null | string;
     track_number:      number;
     type:              TrackType;
-    uri:               string;
+    uri:               string;    
 }
 
 export interface Album {
