@@ -8,7 +8,9 @@ interface Iprops{
 
 const AName: FC<Iprops> = ({name, className}) => {
   return (
-    <p className={className}>{name}</p>
+    <div role="contenedor">
+      <p className={className}>{name}</p>
+    </div>
   )
 }
 

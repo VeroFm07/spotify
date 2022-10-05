@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en Oplaylist Renderiza componente--OPlaylist  1`] = `
+<div>
+  <section
+    class="section__MPlaylist"
+  >
+    <article
+      class="section__playlist"
+    />
+  </section>
+</div>
+`;

@@ -37,7 +37,7 @@ const MFavorites = ({item }: Iprops) => {
         showConfirmButton: false,
         timer: 1500,
         timerProgressBar: true,
-        background: '#004A4F',
+        background: '#6c3430',
         color: '#fff',
         didOpen: (toast) => {
           toast.addEventListener('mouseenter', Swal.stopTimer)

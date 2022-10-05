@@ -13,9 +13,9 @@ interface IProps {
     name?: string;
 }
 
-export const AButton: FC<IProps> = ({ isIcon, onlyIcon, icon, onClick, className, name }) => {
+export const AButton= ({ isIcon, onlyIcon, icon, onClick, className, name }:IProps) => {
     return (
-        <button
+        <button role='contenedor'
             onClick={onClick}
             className={className}
         >

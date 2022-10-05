@@ -14,14 +14,14 @@ interface IProps {
 }
 
 //Función para traer los props y validar en el return si existen para saber que mostrará la interfaz
-export const ALink: FC<IProps> = ({ type, isIcon, icon, name, link, onClick }) => {
+export const ALink = ({ type, isIcon, icon, name, link, onClick }:IProps) => {
     if (type === 'a') {
         return (
-            <a href={link} className='link__login' >{name}</a>
+            <a role='contenedor' href={link} className='link__login' >{name}</a>
         )
     } else {
         return (
-            <NavLink to={link} className={({ isActive }) =>
+            <NavLink  to={link} className={({ isActive }) =>
             isActive ? 'active' : 'noActive'} onClick={onClick}>
                 {
                     isIcon
