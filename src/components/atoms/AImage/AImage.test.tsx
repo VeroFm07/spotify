@@ -14,6 +14,5 @@ describe('Pruebas en el átomo de imagen', () => {
         //EVALUA QUE EL CONTENEDOR->FIGURE: CONTENGA PROPS
         expect(screen.getByRole('contenedor').innerHTML).toContain(className)
         expect(screen.getByRole('contenedor').innerHTML).toContain(urlImg)
-        screen.debug()
     });
 })

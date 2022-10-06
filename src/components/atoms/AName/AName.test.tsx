@@ -15,7 +15,6 @@ describe('Pruebas en el átomo de Name',()=>{
         
         //EVALUA QUE EL CONTENEDOR FIGURE TENGA LA PROP CLASSNAME
         expect(screen.getByRole('contenedor').innerHTML).toContain(className)
-        screen.debug();
 
     })
 })

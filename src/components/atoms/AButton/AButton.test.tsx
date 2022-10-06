@@ -4,9 +4,6 @@ import React from "react";
 import AButton from "./AButton";
 
 describe('Pruebas en el átomo de botón', () => {
-    const handleClic=()=>{
-        
-    }
     
     const className = "button__ejemplo";
     const name = "Nombre botón";
@@ -22,6 +19,6 @@ describe('Pruebas en el átomo de botón', () => {
         
         //EVALUA QUE EL CONTENEDOR DE BOTÓN TENGA LA PROP DEL NAME
         expect(screen.getByRole('contenedor').innerHTML).toContain(name)
-        screen.debug()
+       
     })  
 });

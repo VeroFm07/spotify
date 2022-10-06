@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en OFavoritesList Renderiza componente--OFavoritesList 1`] = `
+<div>
+  <div>
+    <header
+      class="header"
+    >
+      <div
+        role="contenedor"
+      >
+        <p
+          class="header__name"
+        />
+      </div>
+      <figure
+        class="header__figure"
+      >
+        <figure
+          class="main__figure"
+          role="contenedor"
+        >
+          <img
+            alt="spotify"
+            class="header__img"
+          />
+        </figure>
+      </figure>
+    </header>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en OUser Renderiza componente--OFavoritesList 1`] = `
+<div>
+  <div>
+    <header
+      class="header"
+    >
+      <div
+        role="contenedor"
+      >
+        <p
+          class="header__name"
+        />
+      </div>
+      <figure
+        class="header__figure"
+      >
+        <figure
+          class="main__figure"
+          role="contenedor"
+        >
+          <img
+            alt="spotify"
+            class="header__img"
+          />
+        </figure>
+      </figure>
+    </header>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en OUser Renderiza componente--OUser 1`] = `
+<div>
+  <div>
+    <header
+      class="header"
+    >
+      <div
+        role="contenedor"
+      >
+        <p
+          class="header__name"
+        />
+      </div>
+      <figure
+        class="header__figure"
+      >
+        <figure
+          class="main__figure"
+          role="contenedor"
+        >
+          <img
+            alt="spotify"
+            class="header__img"
+          />
+        </figure>
+      </figure>
+    </header>
+  </div>
+</div>
+`;

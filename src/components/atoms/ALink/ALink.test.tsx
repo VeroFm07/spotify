@@ -15,6 +15,5 @@ describe('Pruebas en el átomo de link',()=>{
         
         //EVALUA QUE EL COMPONENTE CONTENGA EL TIPO DEL LINK
         expect(screen.getByRole('contenedor').innerHTML).toContain(type)
-        screen.debug()
     })
 })

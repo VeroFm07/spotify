@@ -7,9 +7,11 @@ interface Iprops{
     icon:IconDefinition;
 }
 
-export const AIcon:FC<Iprops>=({icon})=>{
+export const AIcon=({icon}:Iprops)=>{
     return(
-        <FontAwesomeIcon icon={icon!} className='icon__spotify'/>
+        <div role='contenedor'>
+            <FontAwesomeIcon  icon={icon!} className='icon__spotify'/>
+        </div>
         )
 }
 
